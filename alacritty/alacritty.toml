@@ -1,0 +1,96 @@
+# Alacritty Configuration File
+
+# Import Catppuccin Mocha theme
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+# Window settings
+[window]
+padding = { x = 10, y = 10 }
+dynamic_title = true
+
+# Cursor configuration
+[cursor]
+# Cursor style and blinking configuration
+style = { shape = "Beam", blinking = "Always" }
+blink_interval = 550
+thickness = 0.15
+blink_timeout = 0  
+unfocused_hollow = true
+
+# Font configuration
+[font]
+normal = { family = "Monospace", style = "Regular" }
+bold = { family = "Monospace", style = "Bold" }
+italic = { family = "Monospace", style = "Italic" }
+bold_italic = { family = "Monospace", style = "Bold Italic" }
+size = 11.0
+
+# Key bindings
+[[keyboard.bindings]]
+# Normal terminal search (Ctrl+F)
+action = "SearchForward"
+mods = "Control"
+key = "F"
+
+[[keyboard.bindings]]
+# Ctrl+Shift+C to kill process
+chars = "\u0003"
+mods = "Control|Shift"
+key = "C"
+
+[[keyboard.bindings]]
+# Increase font size
+action = "IncreaseFontSize"
+mods = "Control"
+key = "Equals"
+
+[[keyboard.bindings]]
+# Decrease font size
+action = "DecreaseFontSize"
+mods = "Control"
+key = "Minus"
+
+[[keyboard.bindings]]
+# Reset font size to normal (Ctrl+0)
+action = "ResetFontSize"
+mods = "Control"
+key = "Key0"
+
+[[keyboard.bindings]]
+# Copy to clipboard
+action = "Copy"
+mods = "Control"
+key = "C"
+
+[[keyboard.bindings]]
+# Paste from clipboard
+action = "Paste"
+mods = "Control"
+key = "V"
+
+[[keyboard.bindings]]
+# Scroll to the top of the terminal (Ctrl+Home)
+action = "ScrollToTop"
+mods = "Control"
+key = "Up"
+
+[[keyboard.bindings]]
+# Scroll to the bottom of the terminal (Ctrl+End)
+action = "ScrollToBottom"
+mods = "Control"
+key = "Down"
+
+# Scrolling
+[scrolling]
+history = 10000
+multiplier = 3
+
+# Mouse settings
+[mouse]
+hide_when_typing = true
+
+# Additional settings
+#live_config_reload = true
+
+[shell]
+program = "/bin/bash"
